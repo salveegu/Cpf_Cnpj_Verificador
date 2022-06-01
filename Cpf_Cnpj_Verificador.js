@@ -96,10 +96,10 @@ console.log(tamanhoFormatado);
          if(divisaoResto2 == 10 || divisaoResto2 == 11 || divisaoResto2 == num11Int)
          {
              console.log(divisaoResto2);
-             return alert("CPF ACEITO PARABENS!!");
+             return alert("CPF aceito! "+mascaraCpf);
         }
          else { 
-             return alert("Valor INVALIDO! ");
+             return alert("Valor invalido");
          }
  
      }
@@ -268,7 +268,7 @@ console.log(tamanhoFormatado);
  
        if (divisaoResto02 == 0 || divisaoResto02 == 1) {
          console.log("2º Digito verificador Válido =0");
-         return alert("CNPJ Aceito");
+         return alert("CNPJ Aceito: "+mascaraCnpj);
        } else {
          console.log("CNPJ 2ºDigito verificador invalido!");
        }
@@ -285,7 +285,7 @@ console.log(tamanhoFormatado);
          console.log(
            " O segundo digito verificador é: " + segundoDigitoVerificador
          );
-         return alert("CNPJ Aceito");
+         return alert("CNPJ Aceito: "+mascaraCnpj);
        } else {
          console.log("CNPJ 2º digito verificador invalido!");
        }
