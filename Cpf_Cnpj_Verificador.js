@@ -22,6 +22,19 @@ console.log(tamanhoFormatado);
      if (tamanhoFormatado == 11){
          
          console.log("CPF");
+
+         //______Mascara do CPF______//
+         var arrayCpfCnpjFormatado = Array.from(cpfCnpjFormatado);
+         console.log("CPF/CNPJ em array: "+arrayCpfCnpjFormatado);
+
+         arrayCpfCnpjFormatado.splice(3,0,".");
+         arrayCpfCnpjFormatado.splice(7,0,".");
+         arrayCpfCnpjFormatado.splice(11,0,"-");
+         
+         var arrString = arrayCpfCnpjFormatado.toString();
+         mascaraCpf = arrString.replace(/[,]/g,"");
+         console.log(mascaraCpf);
+
         
          num1 = cpfCnpjFormatado.substr(0,1);
          num2 = cpfCnpjFormatado.substr(1,1);
@@ -98,6 +111,8 @@ console.log(tamanhoFormatado);
 
 
  //______________________Validação CNPJ_____________________________//
+
+
  
  if (tamanhoFormatado == "null" || tamanhoFormatado == "") {
     return alert("Campo vazio!");
@@ -123,7 +138,23 @@ console.log(tamanhoFormatado);
    }
  
    if (tamanhoFormatado == 14) {
+    
     console.log("CNPJ");
+
+    //______Mascara do CPF______//
+    var arrayCpfCnpjFormatado = Array.from(cpfCnpjFormatado);
+    console.log("CPF/CNPJ em array: "+arrayCpfCnpjFormatado);
+
+    arrayCpfCnpjFormatado.splice(2,0,".");
+    arrayCpfCnpjFormatado.splice(6,0,".");
+    arrayCpfCnpjFormatado.splice(10,0,"/");
+    arrayCpfCnpjFormatado.splice(15,0,"-");
+
+    var arrString = arrayCpfCnpjFormatado.toString();
+    mascaraCnpj = arrString.replace(/[,]/g,"");
+    console.log(mascaraCnpj);
+
+
      num1 = cpfCnpjFormatado.substr(0, 1);
      num2 = cpfCnpjFormatado.substr(1, 1);
      num3 = cpfCnpjFormatado.substr(2, 1);
